@@ -1,0 +1,320 @@
+:root {
+    --main-black: #000000;
+    --main-color: #d83620;
+    --primary-color: #691815;
+    --secondary-color: #981416;
+    --main-white: #f2e9e9;
+    --text-color: #cdcdcd;
+    --main-green: #5cdb9a;
+    --main-element-padding: 20px;
+    --main-section-padding: 100px;
+    --main-transtion: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-image: url(/images/background1.png);
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* start the main style */
+
+/* start header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-size: 20px;
+}
+
+header ul,
+header ul li a {
+    color: var(--main-white);
+    transition: 0.7s;
+    letter-spacing: 0.075em;
+}
+
+header>ul li a:hover {
+    color: var(--main-color);
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+header .profile .user-img {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E58C80;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .profile .icon {
+    cursor: pointer;
+}
+
+header .profile .options {
+    position: absolute;
+    top: 60px;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #E58C80;
+    text-align: start;
+    display: none;
+}
+
+header .profile .options .hover:hover {
+    background-color: white;
+    color: #E58C80;
+}
+
+header .profile .options .hover:hover a {
+    color: #E58C80;
+    cursor: pointer;
+}
+
+header .profile .metapoints {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .profile .metapoints .points {
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    color: #E58C80;
+}
+
+header .profile .metapoints:hover .points {
+    background-color: #E58C80;
+    color: white;
+}
+
+header .profile .options li {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header .profile>img {
+    cursor: pointer;
+}
+
+/* end header section */
+
+/* start main section */
+main {}
+
+main>h1 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 84%;
+    color: #F38B66;
+}
+
+main .solar, main .moons {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.left h3 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30.8px;
+    line-height: 84%;
+    color: white;
+}
+
+.left p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: white;
+    max-width: 700px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 150px;
+    margin-right: 150px;
+    flex-basis: 40%;
+}
+
+.right .images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 350px;
+}
+
+.right .images img {
+    transition: 0.5s;
+}
+
+.right .slider {
+    margin-left: 20px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right .slider .rangevalue {
+    position: relative;
+    display: flex;
+    background-color: rgba(209, 41, 41, 0.1);
+    font-size: 18px;
+    background-color: (--main-black);
+    width: 132px;
+    height: 62px;
+    font-weight: 400;
+    color: var(--main-white);
+    border-radius: 10px;
+    border: solid 1px var(--main-color);
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right .slider .rangevalue .icons i:first-child {
+    color: var(--main-color);
+    display: none;
+}
+
+.right .slider .rangevalue .icons i:last-child {
+    color: var(--main-green);
+    display: none;
+}
+
+.right .slider .rangevalue.correct {
+    border-color: var(--main-green);
+    background-color: rgba(2 236 2 / 0.1);
+}
+
+.right .slider .range {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 100%;
+    background-color: #ef3838;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: black;
+}
+
+/* end the main style */
+/* footer start*/
+/* footer start*/
+footer {
+	margin-top: 250px;
+	color: white;
+	text-align: center;
+	background-color: var(--main-black);
+	padding: 50px;
+	display: flex;
+}
+
+footer .up {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: flex;
+	gap: 50px;
+}
+
+footer .contact-us {
+	display: flex;
+	gap: 20px;
+}
+footer .contact-us i {
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+footer .contact-us i:hover {
+	transition: 0.4s;
+	color: var(--main-color);
+}
+
+footer a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* footer end */

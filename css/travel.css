@@ -1,0 +1,299 @@
+:root {
+    --main-black: #000000;
+    --main-color: #d83620;
+    --primary-color: #691815;
+    --secondary-color: #981416;
+    --main-white: #f2e9e9;
+    --text-color: #cdcdcd;
+    --main-green: #5cdb9a;
+    --main-element-padding: 20px;
+    --main-section-padding: 100px;
+    --main-transtion: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-image: url(/images/background1.png);
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* start the main style */
+
+/* start header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-size: 20px;
+}
+
+header ul,
+header ul li a {
+    color: var(--main-white);
+    transition: 0.7s;
+    letter-spacing: 0.075em;
+}
+
+header>ul li a:hover {
+    color: var(--main-color);
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+header .profile .user-img {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E58C80;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .profile .icon {
+    cursor: pointer;
+}
+
+header .profile .options {
+    position: absolute;
+    top: 60px;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #E58C80;
+    text-align: start;
+    display: none;
+}
+
+header .profile .options .hover:hover {
+    background-color: white;
+    color: #E58C80;
+}
+
+header .profile .options .hover:hover a {
+    color: #E58C80;
+    cursor: pointer;
+}
+
+header .profile .metapoints {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .profile .metapoints .points {
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    color: #E58C80;
+}
+
+header .profile .metapoints:hover .points {
+    background-color: #E58C80;
+    color: white;
+}
+
+header .profile .options li {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header .profile>img {
+    cursor: pointer;
+}
+
+/* end header section */
+
+/* start main section */
+
+main {
+    padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main>h1 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 84%;
+    color: #E66856;
+}
+
+main>h2 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49.6px;
+    line-height: 84%;
+    color: white;
+    margin-bottom: 100px;
+}
+
+main .passport, main .tickets, main .training {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+main .passport .left, main .tickets .left, main .training .left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+main .passport .left h2, main .tickets .left h2, main .training .left h2 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30.8px;
+    line-height: 84%;
+    color: #fff;
+}
+
+main .passport .left p, main .tickets .left p, main .training .left p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: white;
+    max-width: 500px;
+}
+
+main .passport .left button, main .tickets .left button, main .training .left button {
+    width: 340px;
+    height: 70px;
+    background-color: #2D4A86;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Cairo';
+    font-style: normal;
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 60px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+main .passport .left button:hover, main .tickets .left button:hover, main .training .left button:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: #22386D;
+}
+
+main hr {
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    margin: 150px 0;
+}
+
+/* end the main style */
+/* footer start*/
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+footer .up {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .down {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer ul {
+    display: flex;
+    gap: 50px;
+}
+
+footer .contact-us {
+    padding: 20px;
+    background-color: #2D4A86;
+    width: 150px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: "Cairo";
+    color: var(--main-white);
+    cursor: pointer;
+}
+
+footer .contact-us:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: #22386D;
+}
+
+footer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* footer end */

@@ -1,0 +1,170 @@
+:root {
+    --main-black: #000000;
+    --main-color: #d83620;
+    --primary-color: #691815;
+    --secondary-color: #981416;
+    --main-white: #f2e9e9;
+    --main-element-padding: 20px;
+    --main-section-padding: 100px;
+    --main-transtion: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-image: url(/images/background1.png);
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+li {
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* body */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: url(../images/signupbg.png);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.container h1 {
+    color: #D83620;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30.8px;
+    line-height: 84%;
+}
+
+.container h3 {
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 84%;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 84%;
+}
+
+form input,
+form button,
+form select {
+    height: 60px;
+    width: 370px;
+    border-radius: 10px;
+    outline: none;
+}
+
+form label {
+    color: white;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+form .checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+form input, form select {
+    text-indent: 15px;
+}
+
+form input::placeholder {
+    color: #EF4928;
+    opacity: 0.45;
+}
+
+form button {
+    width: 265px;
+    background-color: #F44336;
+    color: white;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form select {
+    color: rgba(244, 67, 54, 0.45);
+    display: none;
+}
+
+form .register-btn {
+    display: none;
+}
+
+form select option {
+    opacity: 0.45;
+}
+
+form .fb-google {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form .fb-google .btn:hover {
+    cursor: pointer;
+}
+
+form p {
+    color: white;
+}
+
+form p a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+form a {
+    color: #0B9DBD;
+}

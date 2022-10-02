@@ -1,0 +1,386 @@
+:root {
+	--main-black: #000000;
+	--main-color: #d83620;
+	--primary-color: #691815;
+	--secondary-color: #981416;
+	--main-white: #f2e9e9;
+	--text-color: #cdcdcd;
+	--main-green: #5cdb9a;
+	--main-element-padding: 20px;
+	--main-section-padding: 100px;
+	--main-transtion: 0.3s;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-image: url(/images/background1.png);
+	background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+	font-family: "Cairo", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	width: 90%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/* start the main style */
+
+/* start header section */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul,
+header .subscribe {
+	display: flex;
+	justify-content: space-between;
+	gap: 35px;
+	font-size: 20px;
+}
+
+header ul li a {
+	color: var(--main-white);
+	transition: 0.7s;
+	letter-spacing: 0.075em;
+}
+
+header ul li a:hover {
+	color: var(--main-color);
+}
+
+header .subscribe button {
+	outline: none;
+	border: none;
+	line-height: 37px;
+	padding: 0px 10px;
+	border-radius: 10px;
+	font-family: "Cairo", sans-serif;
+	transition: 0.6s;
+}
+
+header .subscribe button a {
+	transition: 0.6s;
+}
+
+header .subscribe button:first-child {
+	background-color: transparent;
+}
+
+header .subscribe button:first-child:hover a {
+	color: var(--main-color);
+}
+
+header .subscribe button:first-child a {
+	color: var(--main-white);
+}
+
+header .subscribe button:last-child {
+	color: var(--main-white);
+	background-color: #e66856;
+}
+
+header .subscribe button:last-child a {
+	color: var(--main-white);
+}
+
+header .subscribe button:last-child:hover {
+	color: #e66856;
+	background-color: var(--main-white);
+}
+
+header .subscribe button:last-child:hover a {
+	color: #e66856;
+}
+
+/* end header section */
+
+/* start main section */
+
+main {
+	padding-top: var(--main-section-padding);
+	padding-bottom: var(--main-section-padding);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+main .image {
+	background-image: url(/images/planet.png);
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	box-shadow: -20px -20px 50px 10px black inset, 0px 0px 20px inset black;
+	animation: spiner 35s ease alternate infinite;
+}
+
+@keyframes spiner {
+	100% {
+		background-position: 100%;
+	}
+}
+@keyframes float {
+	25% {
+		margin-top: -5px;
+	}
+	50% {
+		margin-top: -0px;
+	}
+	75% {
+		margin-top: 5px;
+	}
+	100% {
+		margin-top: 10px;
+	}
+}
+
+main .text {
+	max-width: 45%;
+}
+
+main .text h1 {
+	font-size: 80px;
+	color: var(--main-white);
+	line-height: 1;
+}
+
+main .text p {
+	font-size: 22px;
+	color: var(--text-color);
+	line-height: 1.6;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	overflow: hidden;
+}
+
+/* end main section */
+
+/* start informations section */
+section.informations {
+	padding-bottom: var(--main-section-padding);
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 2px var(--main-white);
+	align-items: flex-start;
+	margin-top: 100px;
+}
+
+section.informations .game {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	margin-top: 150px;
+	margin-right: 150px;
+	flex-basis: 40%;
+}
+
+section.informations .game .images {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 350px;
+}
+
+section.informations .game .images img {
+	transition: 0.5s;
+}
+
+section.informations .game .slider {
+	margin-left: 20px;
+	position: relative;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+section.informations .game .slider .rangevalue {
+	position: relative;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
+	background-color: (--main-black);
+	width: 132px;
+	height: 62px;
+	font-weight: 400;
+	color: var(--main-white);
+	border-radius: 10px;
+	border: solid 1px var(--main-color);
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+section.informations .game .slider .rangevalue .icons i:first-child {
+	color: var(--main-color);
+	display: none;
+}
+
+section.informations .game .slider .rangevalue .icons i:last-child {
+	color: var(--main-green);
+	display: none;
+}
+
+section.informations .game .slider .rangevalue.right {
+	border-color: var(--main-green);
+	background-color: rgba(2 236 2 / 0.1);
+}
+
+section.informations .game .slider .range {
+	-webkit-appearance: none;
+	height: 20px;
+	width: 100%;
+	background-color: #ef3838;
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	background: black;
+}
+
+.informations .text {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 40%;
+}
+
+.informations .text h1 {
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 84%;
+	color: #e66856;
+}
+
+.informations .text h2 {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 49.6px;
+	line-height: 84%;
+}
+
+.informations .text h5 {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 30.8px;
+	line-height: 84%;
+	margin-top: 30px;
+}
+
+.informations .text p {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	margin-top: 20px;
+	color: var(--text-color);
+	max-width: 100%;
+}
+
+.lien {
+	padding: 20px;
+	background-color: #2d4a86;
+	width: 150px;
+	margin-top: 50px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	font-family: "Cairo";
+	color: var(--main-white);
+	transition: 0.6s;
+	cursor: pointer;
+	margin-bottom: 100px;
+	font-size: 22px;
+	font-weight: 400;
+}
+.lien:hover {
+	background: #3f69c0;
+}
+.travel img {
+	margin-top: 150px;
+	margin-right: 150px;
+}
+/* start informations section */
+
+/* footer start*/
+footer {
+	margin-top: 250px;
+	color: white;
+	text-align: center;
+	background-color: var(--main-black);
+	padding: 50px;
+	display: flex;
+}
+
+footer .up {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: flex;
+	gap: 50px;
+}
+
+footer .contact-us {
+	display: flex;
+	gap: 20px;
+}
+footer .contact-us i {
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+footer .contact-us i:hover {
+	transition: 0.4s;
+	color: var(--main-color);
+}
+
+footer a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* footer end */
+
+/* end the main style */

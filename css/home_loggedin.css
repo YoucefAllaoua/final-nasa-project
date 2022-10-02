@@ -1,0 +1,414 @@
+:root {
+	--main-black: #000000;
+	--main-color: #d83620;
+	--primary-color: #691815;
+	--secondary-color: #981416;
+	--main-white: #f2e9e9;
+	--text-color: #cdcdcd;
+	--main-green: #5cdb9a;
+	--main-element-padding: 20px;
+	--main-section-padding: 100px;
+	--main-transtion: 0.3s;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-image: url(/images/background1.png);
+	background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+	font-family: "Cairo", sans-serif;
+}
+
+a {
+	text-decoration: none;
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	width: 90%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/* start the main style */
+
+/* start header section */
+ .logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header > ul {
+	display: flex;
+	justify-content: space-between;
+	gap: 35px;
+	font-size: 20px;
+}
+
+header ul,
+header ul li a {
+	color: var(--main-white);
+	transition: 0.7s;
+	letter-spacing: 0.075em;
+}
+
+header > ul li a:hover {
+	color: var(--main-color);
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+header .profile .user-img {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E58C80;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .profile .icon {
+    cursor: pointer;
+}
+
+header .profile .options {
+    position: absolute;
+    top: 60px;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #E58C80;
+    text-align: start;
+    display: none;
+}
+
+header .profile .options .hover:hover {
+    background-color: white;
+    color: #E58C80;
+}
+
+header .profile .options .hover:hover a {
+    color: #E58C80;
+    cursor: pointer;
+}
+
+header .profile .metapoints {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .profile .metapoints .points {
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    color: #E58C80;
+}
+
+header .profile .metapoints:hover .points {
+    background-color: #E58C80;
+    color: white;
+}
+
+header .profile .options li {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header .profile > img {
+    cursor: pointer;
+}
+
+/* end header section */
+
+/* start main section */
+
+main {
+	padding-top: var(--main-section-padding);
+	padding-bottom: var(--main-section-padding);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+main .image {
+	background-image: url(/images/planet.png);
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	box-shadow: -20px -20px 50px 10px black inset, 0px 0px 20px inset black;
+	animation: spiner 50s ease alternate infinite;
+}
+
+@keyframes spiner {
+	100% {
+		background-position: 100%;
+	}
+}
+
+main .text {
+	max-width: 45%;
+}
+
+main .text h1 {
+	font-size: 80px;
+	color: var(--main-white);
+	line-height: 1;
+}
+
+main .text p {
+	font-size: 22px;
+	color: var(--text-color);
+	line-height: 1.6;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	overflow: hidden;
+}
+
+/* end main section */
+
+/* start informations section */
+section.informations {
+	padding-bottom: var(--main-section-padding);
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 2px var(--main-white);
+	align-items: flex-start;
+	margin-top: 100px;
+}
+
+section.informations .game {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	margin-top: 150px;
+	margin-right: 150px;
+	flex-basis: 40%;
+}
+
+section.informations .game .images {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 350px;
+}
+
+section.informations .game .images img {
+	transition: 0.5s;
+}
+
+section.informations .game .slider {
+	margin-left: 20px;
+	position: relative;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+section.informations .game .slider .rangevalue {
+	position: relative;
+	display: flex;
+	background-color: rgba(209, 41, 41, 0.1);
+	font-size: 18px;
+	background-color: (--main-black);
+	width: 132px;
+	height: 62px;
+	font-weight: 400;
+	color: var(--main-white);
+	border-radius: 10px;
+	border: solid 1px var(--main-color);
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+section.informations .game .slider .rangevalue .icons i:first-child {
+	color: var(--main-color);
+	display: none;
+}
+
+section.informations .game .slider .rangevalue .icons i:last-child {
+	color: var(--main-green);
+	display: none;
+}
+
+section.informations .game .slider .rangevalue.right {
+	border-color: var(--main-green);
+	background-color: rgba(2 236 2 / 0.1);
+}
+
+section.informations .game .slider .range {
+	-webkit-appearance: none;
+	height: 20px;
+	width: 100%;
+	background-color: #ef3838;
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	background: black;
+}
+
+.informations .text {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 40%;
+}
+
+.informations .text h1 {
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 84%;
+	color: #e66856;
+}
+
+.informations .text h2 {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 49.6px;
+	line-height: 84%;
+}
+
+.informations .text h5 {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 30.8px;
+	line-height: 84%;
+	margin-top: 30px;
+}
+
+.informations .text p {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	margin-top: 20px;
+	color: var(--text-color);
+	max-width: 100%;
+}
+
+button.learn-more {
+	padding: 20px;
+	background-color: #e66856;
+	width: 150px;
+	position: absolute;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	font-family: "Cairo";
+	color: var(--main-white);
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	margin-bottom: 100px;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+button.learn-more:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: #e66856;
+}
+
+/* start informations section */
+
+/* end the main style */
+/* footer start*/
+footer {
+	color: white;
+	text-align: center;
+}
+
+footer .up {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .down {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+footer ul {
+	display: flex;
+	gap: 50px;
+}
+
+footer .contact-us {
+	padding: 20px;
+	background-color: #e66856;
+	width: 150px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	font-family: "Cairo";
+	color: var(--main-white);
+	cursor: pointer;
+}
+
+footer .contact-us:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: #e66856;
+}
+
+footer a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* footer end */

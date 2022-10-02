@@ -1,0 +1,439 @@
+:root {
+	--main-black: #000000;
+	--main-color: #d83620;
+	--primary-color: #691815;
+	--secondary-color: #981416;
+	--main-white: #f2e9e9;
+	--text-color: #cdcdcd;
+	--main-green: #5cdb9a;
+	--main-element-padding: 20px;
+	--main-section-padding: 100px;
+	--main-transtion: 0.3s;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-image: url(/images/background1.png);
+	background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+	font-family: "Cairo", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Cairo", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	width: 90%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/* start the main style */
+
+/* start header section */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header > ul {
+	display: flex;
+	justify-content: space-between;
+	gap: 35px;
+	font-size: 20px;
+}
+
+header ul,
+header ul li a {
+	color: var(--main-white);
+	transition: 0.7s;
+	letter-spacing: 0.075em;
+}
+
+header > ul li a:hover {
+	color: var(--main-color);
+}
+
+header .profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+	position: relative;
+}
+
+header .profile .user-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e58c80;
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+header .profile .icon {
+	cursor: pointer;
+}
+
+header .profile .options {
+	position: absolute;
+	top: 60px;
+	width: 170px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #e58c80;
+	text-align: start;
+	display: none;
+}
+
+header .profile .options .hover:hover {
+	background-color: white;
+	color: #e58c80;
+}
+
+header .profile .options .hover:hover a {
+	color: #e58c80;
+	cursor: pointer;
+}
+
+header .profile .metapoints {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+header .profile .metapoints .points {
+	padding: 5px;
+	background-color: white;
+	border-radius: 10px;
+	color: #e58c80;
+}
+
+header .profile .metapoints:hover .points {
+	background-color: #e58c80;
+	color: white;
+}
+
+header .profile .options li {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+header .profile > img {
+	cursor: pointer;
+}
+
+/* end header section */
+
+/* start main section */
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	gap: 200px;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-top: 100px;
+}
+
+.user-info .image {
+	width: 120px;
+	height: 120px;
+	color: white;
+	background-color: #e58c80;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-family: "Roboto";
+	font-size: 40px;
+}
+
+.user-info .image p {
+	margin: 0 auto;
+}
+
+.user-info h1 {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 84%;
+	color: white;
+}
+
+.user-info h2 {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 84%;
+	color: white;
+}
+
+.user-info h3 {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 84%;
+	color: #f38b66;
+}
+
+.purshases {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 100px;
+}
+
+.land {
+	background: #22386d;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 40px;
+	position: relative;
+	border-radius: 20px;
+	flex-basis: 22%;
+	transition: 0.3s;
+	position: relative;
+}
+
+.land .state {
+	font-size: 1.1rem;
+	font-weight: 400;
+	font-family: "Cairo", sans-serif;
+	margin-bottom: 25px;
+	display: none;
+}
+
+.land .state.shown {
+	display: initial;
+}
+
+.land > img {
+	position: absolute;
+	top: -150px;
+}
+
+.land .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.land .content .name {
+	font-family: "Cairo", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 84%;
+	margin-bottom: 15%;
+}
+
+.land .content .price {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 84%;
+	margin-bottom: 35px;
+}
+
+.land .content img {
+	width: 120px;
+	margin-bottom: 20px;
+}
+
+.offer {
+	background-color: #22386d;
+	color: white;
+	position: relative;
+	padding: 40px 20px;
+	border-radius: 20px;
+	scale: 0.8;
+	margin-left: -25px;
+}
+
+.offer .content {
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 80px;
+}
+
+.content h5 {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 84%;
+}
+
+.content p {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 84%;
+}
+
+.currency-logo {
+	width: 81px;
+	height: 82px;
+	background: #e58c80;
+	border-radius: 50px;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+button {
+	background-color: #bf4538;
+	color: white;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	border: none;
+	border-radius: 50px;
+	padding: 20px 40px;
+	cursor: pointer;
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 84%;
+}
+
+.ticket {
+	position: relative;
+	background-color: #22386d;
+	color: white;
+	padding: 60px 20px;
+	border-radius: 20px;
+}
+
+.ticket .content {
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.ticket img {
+	position: absolute;
+	top: -120px;
+	left: 50%;
+	transform: translate(-50%);
+	transition: 0.6s;
+}
+
+.ticket h3 {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 84%;
+}
+
+.ticket h5 {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 84%;
+}
+
+.ticket p {
+	font-family: "Cairo";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 84%;
+}
+
+/* end main section */
+/* footer start*/
+
+footer {
+	margin-top: 250px;
+	color: white;
+	text-align: center;
+	background-color: var(--main-black);
+	padding: 50px;
+	display: flex;
+}
+
+footer .up {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: flex;
+	gap: 50px;
+}
+
+footer .contact-us {
+	display: flex;
+	gap: 20px;
+}
+footer .contact-us i {
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+footer .contact-us i:hover {
+	transition: 0.4s;
+	color: var(--main-color);
+}
+
+footer a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* footer end */
